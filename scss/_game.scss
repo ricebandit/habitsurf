@@ -1,0 +1,255 @@
+#game{
+
+	.ui{
+		height:100%;
+		left:0;
+		pointer-events:none;
+		position: absolute;
+		top:0;
+		width:100%;
+
+		.tallies{
+			display:flex;
+			justify-content:center;
+			margin-top:20px;
+
+			.pluses, .points{
+				display:flex;
+
+				.item{
+					align-items:center;
+					display:flex;
+					flex-direction:column;
+					justify-content:center;
+					margin-left:10px;
+
+					&:first-child{
+						margin-left:0;
+					}
+				}
+
+
+			}
+
+			.points{
+				margin-left:20px;
+			}
+
+			.strikes{
+				display:flex;
+				position:absolute;
+				right:20px;
+
+				.strike-item{
+					aspect-ratio:1;
+					background:url(../img/sunglasses-empty.png) no-repeat center;
+					background-size:contain;
+					margin-left:10px;
+					width:50px;
+
+					&:first-child{
+						margin-left:0;
+					}
+
+					&.out{
+					background:url(../img/sunglasses.png) no-repeat center;
+					background-size:contain;
+					}
+				}
+			}
+		}
+
+		.collected-effects{
+			height:100%;
+			left:0;
+			pointer-events:none;
+			position:absolute;
+			top:0;
+			width:100%;
+
+			.effect-item{
+				left:50%;
+				top:180px;
+				position:absolute;
+				transform:translate3d(-50%, -50%, 0);
+				transform-origin: 0 0;
+
+				&.animate{
+					transition:300ms transform, 300ms left, 300ms top, 300ms opacity;
+				}
+
+				img{
+					max-width:200px;
+					width:100%;
+				}
+			}
+
+			.combo{
+				display:inline-block;
+				position: absolute;
+				right:20px;
+				opacity:0;
+				top:150px;
+				transform:translate3d(100%, 0, 0);
+				transition:400ms opacity, 400ms transform;
+
+				&.show{
+					opacity:1;
+					transform:translate3d(0, 0, 0);
+					transition:500ms opacity, 500ms transform;
+				}
+
+				h1{
+					display:inline-block;
+				}
+			}
+		}
+
+		.commentary{
+			align-items:center;
+			display:flex;
+			height:100%;
+			justify-content: center;
+			left:0;
+			pointer-events:none;
+			position:absolute;
+			top:0;
+			width:100%;
+
+			.comment-container{
+				display:flex;
+				justify-content:center;
+				position:absolute;
+				width:300px;
+
+				&.countdown{
+					opacity:0;
+
+					&.on{
+						opacity:1;
+					}
+
+
+					.count{
+						font-size:50px;
+						opacity:1;
+						position:absolute;
+						text-align:center;
+						transition: 1s transform;
+
+						&.pre{
+							opacity:0;
+						}
+
+						&.on{
+							transform:scale(3);
+							transition:none;
+						}
+
+						&.off{
+							display:none;
+						}
+
+						&:first-child{
+							font-size:90px;
+							transform:scale(1);
+							transition: 1000ms transform;
+						}
+					}
+
+					&.out{
+						opacity:0;
+						transform:translate3d(-50%, 0, 0);
+						transition:400ms transform 500ms, 400ms opacity 500ms;
+					}
+				}
+
+				&.finish{
+					opacity:0;
+
+					&.on{
+						opacity:1;
+					}
+
+					#finish{
+						font-size:75px;
+						opacity:1;
+						position:absolute;
+						transform:scale(1);
+						transition: 800ms transform;
+
+						&.on{
+							transform:scale(2);
+							transition:none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.on{
+
+		.controls{
+			pointer-events:auto;
+		}
+
+	}
+
+	.controls{
+		aspect-ratio:1;
+		background:rgba(0,0,0,0.8);
+		bottom:0;
+		display:none;
+		max-width: 300px;
+		position:absolute;
+		width: calc(100vw - 30px);
+
+		&.on{
+			display:block;
+		}
+
+		.control-arrow{
+			background:url(../img/controls-arrow.png) no-repeat;
+			background-size:contain;
+			cursor:pointer;
+			height:100px;
+			position:absolute;
+			width:100px;
+
+			-webkit-touch-callout:none;
+			-webkit-user-select:none;
+			-khtml-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+			&#up{
+				transform:translate3d(-50%, -50%, 0);
+				left:50%;
+				top:0;
+			}
+
+			&#down{
+				left:50%;
+				bottom:0;
+				transform: translate3d(-50%, 50%, 0) rotate(180deg);
+			}
+
+			&#left{
+				display:none;
+				left:0%;
+				top:50%;
+				transform:translate3d(-50%, -50%, 0) rotate(270deg);
+			}
+
+			&#right{
+				display:none;
+				right:0%;
+				top:50%;
+				transform:translate3d(50%, -50%, 0) rotate(90deg);
+			}
+		}
+	}
+}

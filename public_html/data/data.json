@@ -1,0 +1,148 @@
+{
+	"player": {
+		"x": 100,
+		"y": 250,
+		"characters":[
+			{"id": 0, "name": "Burger Betty"},
+			{"id": 1, "name": "Frankie Fries"},
+			{"id": 2, "name": "Jake the Shake"}
+		]
+
+	},
+
+	"objects":[
+		{"id":"item-burger", "src":"img/item-burger.png"},
+		{"id":"item-fries", "src":"img/item-fries.png"},
+		{"id":"item-shake", "src":"img/item-shake.png"},
+		{"id":"item-shell", "src":"img/item-shell.png"},
+		{"id":"item-shark", "src":"img/item-shark.png"},
+		{"id":"item-post", "src":"img/item-post.png"},
+		{"id":"item-tentacle", "src":"img/item-tentacle.png"},
+		{"id":"char-0", "src":"img/character0.png"},
+		{"id":"char-1", "src":"img/character1.png"},
+		{"id":"char-2", "src":"img/character2.png"},
+		{"id":"characters-0", "src":"img/characters-1.png"},
+		{"id":"characters-1", "src":"img/characters-2.png"},
+		{"id":"characters-2", "src":"img/characters-3.png"},
+		{"id":"bg", "src":"img/bg.jpg"},
+		{"id":"strike", "src":"img/item-strike.png"},
+		{"id":"controls-arrow", "src":"img/controls-arrow.png"},
+		{"id":"bg-sky", "src":"img/bg-sky.jpg"},
+		{"id":"fg-chair", "src":"img/fg-chair.png"},
+		{"id":"wave-0", "src":"img/wave-1.png"},
+		{"id":"wave-1", "src":"img/wave-2.png"},
+		{"id":"wave-2", "src":"img/wave-3.png"},
+		{"id":"wave-test", "src":"img/wave-test.jpg"},
+		{"id":"sunglasses", "src":"img/sunglasses.png"},
+		{"id":"sunglasses-empty", "src":"img/sunglasses-empty.png"},
+		{"id":"audio-loop-game", "src":"audio/Cruising-in-Cali_AdobeStock_356915842_preview.mp3", "data": 1},
+		{"id":"audio-loop-menu", "src":"audio/ROCK-SURF-RELAXED_AdobeStock_493554242_preview.mp3", "data": 1},
+		{"id":"audio-sfx-button", "src":"audio/ES_Button Push 5 - SFX Producer.mp3", "data": 4},
+		{"id":"audio-sfx-paper", "src":"audio/ES_Paper Turn - SFX Producer.mp3", "data": 4}
+	],
+
+	"items": [
+	{
+		"type" : "burger",
+		"amt" : 2,
+		"basePoints": 3,
+		"widthPx": 200
+	},{
+		"type" : "fries",
+		"amt" : 2,
+		"basePoints": 2,
+		"widthPx": 200
+	},{
+		"type" : "shake",
+		"amt" : 2,
+		"basePoints": 1,
+		"widthPx": 200
+	},{
+		"type" : "shark",
+		"amt" : 5,
+		"widthPx": 250
+	},{
+		"type" : "post",
+		"amt" : 5,
+		"widthPx": 200
+	},{
+		"type" : "tentacle",
+		"amt" : 5,
+		"widthPx": 200
+	}
+	],
+	"finish": 5000,
+
+	"sprites": {
+		"wave": {
+
+			"images": [
+			    "img/wave-1.png",
+			    "img/wave-2.png",
+			    "img/wave-3.png"
+			],
+
+			"framerate": 10,
+			"frames": [
+			    [1, 1, 1440, 1644, 0, 0, -43],
+			    [1, 1, 1440, 1635, 1, 0, -52],
+			    [1, 1, 1440, 1632, 2, 0, -55]
+			],
+
+			"animations": {
+			    "wave-pipeline": { "frames": [2, 0, 1] }
+			}
+
+		},
+		"characters":{
+			"images": [
+			    "img/characters-1.png",
+			    "img/characters-2.png",
+			    "img/characters-3.png"
+			],
+
+			"framerate": 20,
+			"frames": [
+			    [1, 1, 899, 928, 0, -10, -23],
+			    [1, 1, 899, 928, 0, -10, -23],
+			    [1, 1, 899, 928, 0, -10, -23],
+			    [1, 931, 953, 811, 0, -24, -13],
+			    [1, 931, 953, 811, 0, -24, -13],
+			    [1, 931, 953, 811, 0, -24, -13],
+			    [902, 1, 953, 808, 0, -24, -16],
+			    [902, 1, 953, 808, 0, -24, -16],
+			    [902, 1, 953, 808, 0, -24, -16],
+			    [956, 811, 899, 928, 0, -8, -21],
+			    [956, 811, 899, 928, 0, -8, -21],
+			    [956, 811, 899, 928, 0, -8, -21],
+			    [1, 1, 899, 928, 1, -10, -23],
+			    [1, 1, 899, 928, 1, -10, -23],
+			    [1, 1, 899, 928, 1, -10, -23],
+			    [1, 931, 953, 799, 1, -24, -25],
+			    [1, 931, 953, 799, 1, -24, -25],
+			    [1, 931, 953, 799, 1, -24, -25],
+			    [902, 1, 719, 831, 1, -59, -169],
+			    [902, 1, 719, 831, 1, -59, -169],
+			    [902, 1, 719, 831, 1, -59, -169],
+			    [956, 834, 718, 838, 1, -60, -162],
+			    [956, 834, 718, 838, 1, -60, -162],
+			    [956, 834, 718, 838, 1, -60, -162],
+			    [1, 1, 718, 836, 2, -60, -164],
+			    [1, 1, 718, 836, 2, -60, -164],
+			    [1, 1, 718, 836, 2, -60, -164]
+			],
+
+			"animations": {
+			    "up/character0": { "frames": [0, 9, 12] },
+			    "up/character1": { "frames": [1, 10, 13] },
+			    "up/character2": { "frames": [2, 11, 14] },
+			    "side/character0": { "frames": [15, 6, 3] },
+			    "side/character1": { "frames": [16, 7, 4] },
+			    "side/character2": { "frames": [17, 8, 5] },
+			    "down/character0": { "frames": [24, 18, 21] },
+			    "down/character1": { "frames": [25, 19, 22] },
+			    "down/character2": { "frames": [26, 20, 23] }
+			}
+		}
+	}
+}

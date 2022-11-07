@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Ultra';
+    src: url('fonts/Ultra-Regular.eot');
+    src: url('fonts/Ultra-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Ultra-Regular.woff2') format('woff2'),
+        url('fonts/Ultra-Regular.woff') format('woff'),
+        url('fonts/Ultra-Regular.ttf') format('truetype'),
+        url('fonts/Ultra-Regular.svg#Ultra-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

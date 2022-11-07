@@ -1,0 +1,50 @@
+#character{
+	background:purple;
+
+	.body{
+		display:flex;
+		margin-top:30px;
+
+		.character{
+			cursor:pointer;
+			display:flex;
+			flex-direction:column;
+			margin-left:20px;
+			width:300px;
+
+
+			&:first-child{
+				margin-left:0;
+			}
+
+			.character-image{
+				aspect-ratio:2/3;
+				background:black;
+				border:3px solid rgba(255,255,255, 0);
+				border-radius:50%;
+				transition:1300ms border;
+				width:100%;
+
+			}
+
+			.character-name{
+				color:black;
+			}
+
+
+			&.selected{
+				.character-image{
+					border:3px solid white;
+					transition:600ms border;
+				}
+			}
+
+			&:hover{
+				.character-image{
+					border:3px solid white;
+					transition:600ms border;
+				}
+			}
+		}
+	}
+}
