@@ -16,6 +16,8 @@ class App{
 		window.onresize = () => {
 			this.resize();
 		};
+
+		// This is a test
 	}
 
 	init(assets, data){
